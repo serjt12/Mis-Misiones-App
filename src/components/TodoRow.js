@@ -69,7 +69,11 @@ class TodoRow extends Component {
 
 
     var editView = {},
-      normalView = {}
+      normalView = {
+
+
+
+      }
 
     if (this.state.editing) {
       normalView.display = 'none'
@@ -84,12 +88,16 @@ class TodoRow extends Component {
 
 
     return (
-      <li className="collection-item avatar " >
+
+      <li className=" collection-item avatar visible " style={{display:"flex"}}>
         
         
         <i 
-             className="material-icons blue circle" 
-             onClick={this.props.handleCompleteTodo(this.props.todo.id)} >done</i>
+             className="material-icons blue-text small visible" 
+             
+             onClick={this.props.handleCompleteTodo(this.props.todo.id)} 
+             style={styles.check}
+             >done</i>
             <span
              style = {this.props.todo.completed ? styles.completed : {} }
              
@@ -99,10 +107,12 @@ class TodoRow extends Component {
             onDoubleClick= { this.handleEditTodo.bind(this) }
             >
             
-           <p style={{fontSize:20}}> { this.state.text }</p></span></span>
+           <p style={styles.textTodo}> { this.state.text }</p></span></span>
      
      
-     <i className="material-icons red-text secondary-content"
+     <i 
+     style={styles.cancel}
+     className="material-icons red-text tiny right visible"
             onClick={this.props.handleRemoveTodo(this.props.todo.id)}>
             clear
             </i>
@@ -137,11 +147,29 @@ const styles = {
     textDecoration: 'line-through',
     textDecorationColor: 'red'
   },
-  todoStyle: {
+  check: {
+    position: "relative",
+    right: 60,
+    width: 20,
+    top: 15
+  },
+  cancel: {
+    position: "relative",
+    top: 25,
+    left: 180
+  },
+  textTodo: {
 
+    fontSize: 20,
+    cursor: "pointer",
+    width: 150,
+    position: "relative",
+    top: 20
 
   }
 };
+
+
 
 
 export default TodoRow;

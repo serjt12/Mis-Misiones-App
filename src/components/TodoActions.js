@@ -29,7 +29,7 @@ class TodoActions extends Component {
       
       
         <RadioButtonGroup
-        style={{width:"10px"}}
+        style={{width:15}}
           name="filter"
           defaultSelected={currentFilter}
           onChange={(e, value) => handleFilter(value)}
@@ -37,19 +37,19 @@ class TodoActions extends Component {
         >
         
           <RadioButton
-            label="All"
+            label="Todas"
             value="all"
             
           />
           
           <RadioButton
-            label="Active"
+            label=" Cumplir"
             value="active"
            
           />
           
           <RadioButton
-            label="Completed"
+            label="Completadas"
             value="completed"
            
           />
@@ -61,7 +61,7 @@ class TodoActions extends Component {
       <li >
       <i onClick = { handleRemoveCompleted } className = "material-icons prefix collection-item"  >
       delete </i> 
-      <label style={styles.label} htmlFor = "icon_prefix" > Borra Todas Las Misiones      Completadas </label> 
+      <label style={styles.label} htmlFor = "icon_prefix" > Borra Todas Las Misiones Completadas </label> 
       
       </li>
       <li className=" collection-item">
@@ -83,9 +83,13 @@ class TodoActions extends Component {
 const styles = {
   label: {
 
-    display: "grid",
+    display: "flex",
     position: "relative",
-    bottom: 30
+    bottom: 30,
+
+
+
+
 
   }
 

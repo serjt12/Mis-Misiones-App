@@ -62,7 +62,7 @@ class TodoList extends Component {
     return (
       <div className="row">
       <div className="col s12 m8 l9  appBox" style={styles.box} >
-        <ul className="collection">
+        <ul className="collection ">
           {filteredTodos.map(todo =>
             <TodoRow
               key={todo.id}
