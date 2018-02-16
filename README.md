@@ -1,18 +1,20 @@
-Mis Misiones
-A TODO LIST web app using React & Redux
+# Mis Misiones
+#### A TODO LIST web app using React & Redux
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+**Getting Started**
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
-This project template was built with Create React App, which provides a simple way to start React projects with no build configuration needed.
+**Prerequisites**
+This project template was built with *Create React App*, which provides a simple way to start React projects with no build configuration needed.
 
 Projects built with Create-React-App include support for ES6 syntax, as well as several unofficial / not-yet-final forms of Javascript syntax such as Class Properties and JSX. See the list of language features and polyfills supported by Create-React-App for more information.
 
-Installing
+**Installing**
+download or clone the repository then `npm install`.
+
 In the project directory, you can run:
 
-npm start
+`npm start`
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
