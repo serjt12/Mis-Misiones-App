@@ -61,7 +61,7 @@ class TodoActions extends Component {
       <li >
       <i onClick = { handleRemoveCompleted } className = "material-icons prefix collection-item"  >
       delete </i> 
-      <label style={styles.label} htmlFor = "icon_prefix" > Borra Todas Las Misiones Completadas {completedTodos} </label> 
+      <label style={styles.label} htmlFor = "icon_prefix" > Borra {completedTodos}  Misiones Completadas  </label> 
       
       </li>
       <li className=" collection-item">
