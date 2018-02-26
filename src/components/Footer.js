@@ -12,6 +12,7 @@ const Footer = ({ todos, currentFilter, handleFilter, handleRemoveCompleted, han
           {leftTodos} 
         </span>
         <TodoActions
+          todos={todos}
           currentFilter={currentFilter}
           handleFilter={handleFilter}
           handleRemoveCompleted={handleRemoveCompleted}

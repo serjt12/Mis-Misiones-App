@@ -9,16 +9,16 @@ class TodoActions extends Component {
 
 
   render() {
-
+    console.log(this.props)
     const {
-
+      todos,
       currentFilter,
       handleFilter,
       handleRemoveCompleted,
       handleCompleteAll,
     } = this.props;
 
-
+    const completedTodos = todos.reduce((count, { completed }) => !completed ? count : count + 1, 0);
 
     return (
 
@@ -61,7 +61,7 @@ class TodoActions extends Component {
       <li >
       <i onClick = { handleRemoveCompleted } className = "material-icons prefix collection-item"  >
       delete </i> 
-      <label style={styles.label} htmlFor = "icon_prefix" > Borra Todas Las Misiones Completadas </label> 
+      <label style={styles.label} htmlFor = "icon_prefix" > Borra Todas Las Misiones Completadas {completedTodos} </label> 
       
       </li>
       <li className=" collection-item">

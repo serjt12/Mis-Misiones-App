@@ -6,11 +6,6 @@ export const addTodo = text => ({
 
 });
 
-export const editTodo = id => ({
-  type: types.EDIT_TODO,
-  id,
-
-});
 
 export const removeTodo = (id, text) => ({
   type: types.REMOVE_TODO,

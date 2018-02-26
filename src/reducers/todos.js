@@ -58,14 +58,6 @@ export default (state = initialState, action = {}) => {
       }));
     case types.REMOVE_COMPLETED:
       return state.filter(todo => todo.completed === false);
-    case types.EDIT_TODO:
-      return state.map(todo =>
-        todo.id === action.id ? {
-          ...todo,
-          editing: !todo.editing,
-        } :
-        todo
-      );
     default:
       return state;
   }

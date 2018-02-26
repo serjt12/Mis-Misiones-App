@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "material-ui": "^0.20.0",
     "materialize-css": "^1.0.0-alpha.3",
     "nodemon": "^1.14.12",
     "react": "^16.2.0",
