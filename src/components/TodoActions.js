@@ -1,99 +1,69 @@
-import React, { Component } from 'react';
-import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
-
-
+import React, { Component } from 'react'
+import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton'
 
 class TodoActions extends Component {
-
-
-
-
-  render() {
+  render () {
     console.log(this.props)
     const {
       todos,
       currentFilter,
       handleFilter,
       handleRemoveCompleted,
-      handleCompleteAll,
-    } = this.props;
+      handleCompleteAll
+    } = this.props
 
-    const completedTodos = todos.reduce((count, { completed }) => !completed ? count : count + 1, 0);
+    const completedTodos = todos.reduce((count, { completed }) => !completed ? count : count + 1, 0)
 
     return (
 
-      <div className="row">
-      
-      
-      <div className="col s3">
-      
-      
-        <RadioButtonGroup
-        style={{width:15}}
-          name="filter"
-          defaultSelected={currentFilter}
-          onChange={(e, value) => handleFilter(value)}
-         
-        >
-        
-          <RadioButton
-            label="Todas"
-            value="all"
-            
-          />
-          
-          <RadioButton
-            label=" Cumplir"
-            value="active"
-           
-          />
-          
-          <RadioButton
-            label="Completadas"
-            value="completed"
-           
-          />
-        </RadioButtonGroup>
-    
-</div>
-     <div className="col s5" style={{position:"relative",bottom:10}}>
-      <ul >
-      <li >
-      <i onClick = { handleRemoveCompleted } className = "material-icons prefix collection-item"  >
-      delete </i> 
-      <label style={styles.label} htmlFor = "icon_prefix" > Borra {completedTodos}  Misiones Completadas  </label> 
-      
-      </li>
-      <li className=" collection-item">
-      
-      <i onClick = { handleCompleteAll } className = "material-icons prefix" >
-      clear_all 
-      </i> 
-      <label style={styles.label} htmlFor = "icon_prefix" > Cumpli Todas Mis Misiones </label> 
-       </li>
-       </ul>
-</div>
-</div>
-
-
-    );
+      <div className='row'>
+        <div className='col s3'>
+          <RadioButtonGroup
+            style={{width: 15}}
+            name='filter'
+            defaultSelected={currentFilter}
+            onChange={(e, value) => handleFilter(value)}
+          >
+            <RadioButton
+              label='Todas'
+              value='all'
+            />
+            <RadioButton
+              label='Cumplir'
+              value='active'
+            />
+            <RadioButton
+              label='Completadas'
+              value='completed'
+            />
+          </RadioButtonGroup>
+        </div>
+        <div className='col s5' style={{position: 'relative', bottom: 10}}>
+          <ul >
+            <li>
+              <i onClick={handleRemoveCompleted} className='material-icons prefix collection-item'>
+                delete </i>
+              <label style={styles.label} htmlFor='icon_prefix'> Borra {completedTodos}  Misiones Completadas  </label>
+            </li>
+            <li className='collection-item'>
+              <i onClick={handleCompleteAll} className='material-icons prefix'>
+                clear_all
+              </i>
+              <label style={styles.label} htmlFor='icon_prefix' > Cumpli Todas Mis Misiones </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    )
   }
 }
 
 const styles = {
   label: {
-
-    display: "flex",
-    position: "relative",
-    bottom: 30,
-
-
-
-
-
+    display: 'flex',
+    position: 'relative',
+    bottom: 30
   }
-
 }
 
-
-export default TodoActions;
+export default TodoActions
